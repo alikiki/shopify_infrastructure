@@ -1,0 +1,22 @@
+{
+  "name": "shopify_infrastructure",
+  "version": "1.0.0",
+  "description": "Shopify 2022 Infrastructure Engineering Internship",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alikiki/shopify_infrastructure.git"
+  },
+  "keywords": [
+    "Shopify"
+  ],
+  "author": "Hye Woong Jeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alikiki/shopify_infrastructure/issues"
+  },
+  "homepage": "https://github.com/alikiki/shopify_infrastructure#readme"
+}

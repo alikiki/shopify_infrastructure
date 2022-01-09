@@ -1,0 +1,38 @@
+body {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.database {
+    width: 80%;
+    float: left;
+    padding: 0;
+}
+
+.edit_window {
+    margin-left: 80%;
+    padding: 0;
+}
+
+a {
+    margin: 10px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgb(169, 192, 235);
+}
+
+td {
+    width: 30%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.edit_panel {
+    border: 1px solid black;
+}

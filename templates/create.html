@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+        <h2>Create a New Entry</h2>
+        <form method="POST">
+            <p>Item ID: <input type="number" name="item_id" min=1 max=100000 required></p>
+            <p>Item Name: <input type="text" name="item_name" pattern="^[A-Za-z\s\-\']+$" required></p>
+            <p>Stock: <input type="number" name="stock" min=0 max=100000 required></p>
+            <p><input type="submit" value="Submit"></p>
+        </form>
+
+        <a href="{{ url_for('show_data') }}">Return to home.</a>
+        <a href="{{ url_for('search') }}">Edit an existing item.</a>
+    </body>
+</html>

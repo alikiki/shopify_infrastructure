@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+    <form action="{{ url_for('edit') }}" method="POST">
+        <p>Item ID: <input type="number" name="item_id" value="{{ selected.item_id }}" readonly></p>
+        <p>Item Name: <input type="text" name="item_name" value="{{ selected.item_name }}" required></p>
+        <p>Stock: <input type="number" name="stock" value="{{ selected.stock }}" min=1 max=100000 required></p>
+        <p><input type="submit" value="Change"></p>
+    </form>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+        <h1>Edit/Delete</h1>
+        <div class="search">
+            <h2>Search for an item to edit/delete.</h2>
+            <form action="{{ url_for('search') }}" method="POST">
+                <p>Item ID: <input type="number" name="item_id"></p>
+                <p>Item Name: <input type="text" name="item_name"></p>
+                <p>Stock: <input type="number" name="stock"></p>
+                <p><input type="submit" value="Search"></p>
+            </form>
+        </div>
+        
+        <hr>
+        <div class="edit_delete">
+            <h3>Searched inventory:</h3>
+            <p>{{ message }}</p>
+            <form action="{{ url_for('edit_delete') }}" method="POST">
+                {% for entry in data %}
+                <p><input type="radio" name="item_all" value="{{ entry.item_id }}" required> ID: {{ entry.item_id }} | Name: {{ entry.item_name }} | Stock: {{ entry.stock }}</p>
+                {% endfor %}
+                <div class="edit_panel">
+                    <h4>Would you like to edit or delete?</h4>
+                    <p><input type="radio" name="edit_delete" value="edit" required> Edit <input type="radio" name="edit_delete" value="delete" required> Delete</p>
+                    <p><input type="submit" value="Submit"></p>
+                </div>
+            </form>
+        </div>
+        
+        <a href="{{ url_for('show_data') }}">Return to home.</a>
+        <a href="{{ url_for('create') }}">Create a new item.</a>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+        <title>Inventory</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Inventory Logger</h1>
+        </header>
+
+        <div class="database">
+            <h3>Inventory View</h3>
+            <p>{{ message }}</p>
+            <table style="width:100%">
+                <thead>
+                    <tr>
+                        <td>Item ID</td>
+                        <td>Item Name</td>
+                        <td>Stock</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in data %}
+                    <tr>
+                        <td>{{ entry.item_id }}</td>
+                        <td>{{ entry.item_name }}</td>
+                        <td>{{ entry.stock }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            <p>{{ entry }}</p>
+            
+            <a href="{{ url_for('download') }}">Download CSV</a>
+        </div>
+
+        <div class="edit_window">
+            <a href="{{ url_for('create') }}">Create new.</a>
+            <a href="{{ url_for('search') }}">Edit existing.</a>
+        </div>
+    </body>
+</html>
