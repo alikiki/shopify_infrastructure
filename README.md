@@ -4,7 +4,7 @@
 
 1. Set up a Python virtual environment: `python -m venv [name of venv]`
 2. Activate virtual environment: `source [name of venv]/bin/activate`
-3. Install requirements: `pip install requirements.txt`
+3. Install requirements: `pip install -r requirements.txt`
 4. Export Flask app: `export FLASK_APP=app`
 5. Run Flask: `flask run`
 6. Navigate to link on Terminal results e.g. `127.0.0.5000`
