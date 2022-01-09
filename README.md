@@ -27,8 +27,19 @@
 
 * String of the form `"id #[item_id] - [item_name] - [stock] left"`
 
+### Endpoints
 
+`GET /` : Shows all data on main index.html page
 
+`POST /create/` : Create new item
+
+`POST /search/` : Search for items
+
+`POST /edit_delete/` : Edit/Delete intermediate page
+
+`POST /edit/` : Edits item
+
+`GET /download/`: Creates CSV and download link to CSV
 
 
 

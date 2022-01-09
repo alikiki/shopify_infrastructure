@@ -39,7 +39,7 @@ def show_data():
     return render_template('index.html', data=all_inventory)
 
 
-@app.route('/create', methods=['GET', 'POST'])
+@app.route('/create/', methods=['GET', 'POST'])
 def create():
     '''
     Create new item 
@@ -128,7 +128,7 @@ def edit():
         return redirect('/')
 
 
-@app.route('/download/')
+@app.route('/download/', methods=['GET'])
 def download():
     '''
     Creates CSV and download link to CSV
